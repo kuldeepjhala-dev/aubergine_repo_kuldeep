@@ -6,14 +6,15 @@ async function fetchUniversityData() {
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
+        console.log(data);
 
         const resultHtml = data.map(university => `
             <div class="card">
-                <img src="${university.alpha_two_code ? 'https://via.placeholder.com/100' : 'https://via.placeholder.com/100'}" alt="University Image">
                 <h2>${university.name}</h2>
+                <h2>${university.country}</h2>
+                <h2><a href="${university.web_pages}">${university.domains}</a></h2>   
             </div>
         `).join('');
-
         document.getElementById('result').innerHTML = resultHtml;
 
     } catch (error) {
