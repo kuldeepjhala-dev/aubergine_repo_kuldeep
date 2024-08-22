@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuldeep Aubergine Test</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>University Search</h1>
+      <div class="form-group">
+        <label for="universityName">University Name:</label>
+        <input
+          type="text"
+          id="universityName"
+          placeholder="Enter university name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <select id="country">
+          <option value="turkey">Turkey</option>
+          <option value="india">India</option>
+          <option value="usa">USA</option>
+          <option value="canada">Canada</option>
+        </select>
+      </div>
+      <button onclick="fetchUniversityData()">Get Data</button>
+
+      <div id="result" class="result"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
